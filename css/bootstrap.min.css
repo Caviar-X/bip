@@ -55,7 +55,7 @@ $cyan:     #00aaaad0 !default;
 
 @font-face {
   font-family: 'Dianzhensong';
-  src: url('https://static.wikia.nocookie.net/backrooms/images/0/0d/%E7%82%B9%E9%98%B5%E5%AE%8B%E5%AD%97.woff2/revision/latest?cb=20230402095639&format=original&path-prefix=zh') format('woff2');
+  src: url('../fonts/%E7%82%B9%E9%98%B5%E5%AE%8B%E5%AD%97.woff2.font-woff2') format('woff2');
 }
 
 *,

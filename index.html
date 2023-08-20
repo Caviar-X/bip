@@ -58,13 +58,13 @@
       return http.status != 404;
     }
     function detect() {
-      var full_url = window.location.hostname + "/domains/" + document.getElementById("url").value + "/index.html";
+      var full_url = "./domains/" + document.getElementById("url").value + "/index.html";
       console.log(full_url);
 
       if (url_exist(full_url)) {
         window.location = full_url;
       } else {
-        document.getElementById("result").innerHTML = `<p class="text-center text-danger" style="font-family: 'Dianzhensong','DOS';">无法查询到该域名/Unable to get the domain</p>`;
+        document.getElementById("result").innerHTML = `<p class="text-center text-danger" style="font-family: 'Dianzhensong','DOS';">Error: domain request return 404 / 域名请求404</p>`;
       }
     }
   </script>
