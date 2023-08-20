@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Backrooms Intranet Proxy</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand">Backrooms Intranet Proxy</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active"><a href="#">Home</a></li>
+          <li class="nav-item">&nbsp;<a href="https://backrooms.fandom.com/zh/wiki/Backrooms_Wiki" target="_blank">ZH
+              Fandom</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="text-center">Backrooms Intranet Proxy</h1>
+    <p class="text-center">
+      Backrooms Intranet Proxy provides you the ability to access Backrooms Intranet System in The Frontrooms.
+    </p>
+    <p class="text-center">
+      This system runs under BMCN OS version 5.0.1-lts (modified by <a
+        href="https://backrooms.fandom.com/zh/wiki/User:Xxixixia" target="_blank">Xxixixia</a>).
+      Programs and web front-end were written by <a href="https://backrooms.fandom.com/zh/wiki/User:Caviar-X"
+        target="_blank">Caviar-X</a>
+    </p>
+    <p class="text-center">
+      Note that all the domains in Backrooms Intranet System end in .br
+    </p>
+    <p class="text-center" style="font-family: 'Dianzhensong';">
+      后室内网代理可以让您在前室浏览来自后室服务器内网的内容
+    </p>
+    <p class="text-center" style="font-family: 'Dianzhensong';">
+      该系统于BMCN OS 版本5.0.1-lts (由<a href="https://backrooms.fandom.com/zh/wiki/User:Xxixixia"
+        target="_blank">夏</a>修改)上运行。程序与网页前端由<a href="https://backrooms.fandom.com/zh/wiki/User:Caviar-X"
+        target="_blank">Caviar-X</a>编写。
+    </p>
+    <p class="text-center" style="font-family: 'Dianzhensong';">
+      所有内网中的域名均以.br结尾
+    </p>
+    <input id="url" class="form-control-plaintext" type="text" placeholder="Enter Domain">
+
+    <button class="btn btn-primary" onclick="javascript:detect()">Go</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    function url_exist(url) {
+      var http = new XMLHttpRequest();
+      http.open('HEAD', url, false);
+      http.send();
+      return http.status != 404;
+    }
+    function detect() {
+      var full_url = window.location.hostname + "/public/" + document.getElementById("url").value + "/index.html";
+      console.log(full_url);
+
+      if (url_exist(full_url)) {
+        window.location = full_url;
+      } else {
+        document.getElementById("result").innerHTML = `<p class="text-center text-danger" style="font-family: 'Dianzhensong','DOS';">无法查询到该域名/Unable to get the domain</p>`;
+      }
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+<footer>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p class="mute-text">© 2022 Caviar-X</p>
+</footer>
+</html>
