@@ -58,9 +58,12 @@
       return http.status != 404;
     }
     function detect() {
+      if (!document.getElementById("url").value.endsWith(".br")) {
+        document.getElementById("result").innerHTML = `<p class="text-center text-danger" style="font-family: 'Dianzhensong','DOS';">Error : format error, no .br at the end / 错误: 域名没有以.br结尾</p>`;
+        return;
+      }
       var full_url = "./domains/" + document.getElementById("url").value + "/index.html";
       console.log(full_url);
-
       if (url_exist(full_url)) {
         window.location = full_url;
       } else {
