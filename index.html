@@ -58,7 +58,7 @@
       return http.status != 404;
     }
     function detect() {
-      var full_url = window.location.hostname + "/public/" + document.getElementById("url").value + "/index.html";
+      var full_url = window.location.hostname + "/domains/" + document.getElementById("url").value + "/index.html";
       console.log(full_url);
 
       if (url_exist(full_url)) {
