@@ -55,6 +55,11 @@
     <div id="result"></div>
   </div>
   <script>
+    $(this).on('keypress', function (event) {
+      if (event.keyCode == 13) {
+        detect();
+      }
+    });
     function url_exist(url) {
       var http = new XMLHttpRequest();
       http.open('HEAD', url, false);
@@ -132,4 +137,5 @@
   <br>
   <p class="mute-text">© 2022 Caviar-X</p>
 </footer>
+
 </html>
