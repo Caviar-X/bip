@@ -55,7 +55,7 @@
     <div id="result"></div>
   </div>
   <script>
-    $(this).on('keypress', function (event) {
+    document.addEventListener("keypress", function (event) {
       if (event.keyCode == 13) {
         detect();
       }
